@@ -214,21 +214,8 @@ var a,b,ab,cd,ggg,hhh;
   canvasContext.strokeStyle = 'blue';
   canvasContext.strokeRect(250,350,175,100);
   
-  /*cx.moveTo(250,350);
-  cx.lineTo(250,450);
-  cx.stroke();
-   cx.moveTo(250,450);
-  cx.lineTo(425,450);
-  cx.stroke();
-   cx.moveTo(425,450);
-  cx.lineTo(425,350);
-  cx.stroke();
-   cx.moveTo(250,350);
-  cx.lineTo(275,350);
-  cx.stroke();
-   cx.moveTo(425,350);
-  cx.lineTo(400,350);
-  cx.stroke();*/
+ 
+  
   canvasContext.lineWidth = 2;
   canvasContext.strokeStyle = 'blue';
   canvasContext.strokeRect(175,425,25,100);
@@ -814,7 +801,7 @@ var x,y;
  
 }
 goon2 = function(){
-console.log("gooning2");
+
 var x,y;
  x=m-a;
  y=n-b;
@@ -1055,7 +1042,7 @@ var x,y;
  
 }
 goon3 = function(){
-console.log("gooning3");
+
 var x,y;
  x=o-a;
  y=p-b;
@@ -1359,8 +1346,7 @@ if(xy==1){
 		}
 	 }
     }	
-   console.log("totale"+ll);
-  console.log("won!!!!!!!!!")
+   
   
  alert("you won!!!!!!!!!");
 
