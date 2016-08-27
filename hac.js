@@ -1,6 +1,7 @@
-var a, b, ab, cd, ggg, hhh;
+var a, b, ab, cd, ggg, hhh,k, l, m, n, o, p;
 var g = [];
 var ch = [];
+document.onkeydown = checkKey;
 
 for (var z = 0; z <= 650; z = z + 25) {
     g[z] = [];
@@ -13,54 +14,6 @@ for (e = 0; e <= 650; e = e + 25) {
         ch[e][f] = 1;
     }
 }
-
-
-function checkleft(lco, rco) {
-    checkflag = 0;
-    if (lco <= 25) {} else if ((lco == 75) && (rco >= 675 && rco <= 700)) {} else if ((lco == 150) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 225) || (rco >= 275 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 575 && rco <= 700))) {} else if ((lco == 225) && ((rco >= 200 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 675 && rco <= 775))) {} else if ((lco == 300) && ((rco >= 275 && rco <= 300) || (rco == 350) || (rco >= 575 && rco <= 625) || (rco >= 750 && rco <= 775))) {} else if ((lco == 375) && ((rco >= 200 && rco <= 300) || (rco >= 500 && rco <= 625) || (rco >= 675 && rco <= 775))) {} else if ((lco == 450) && ((rco >= 200 && rco <= 225) || (rco >= 350 && rco <= 450) || (rco >= 500 && rco <= 525) || (rco >= 675 && rco <= 700))) {} else if ((lco == 525) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 575 && rco <= 625) || (rco >= 675 && rco <= 775))) {} else if ((lco == 650) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 225) || (rco >= 275 && rco <= 300) || (rco >= 575 && rco <= 625) || (rco >= 750 && rco <= 775))) {} else if ((lco == 600) && ((rco >= 625 && rco <= 700))) {} else if ((lco == 275) && (rco == 400)) {} else {
-        checkflag = 1;
-    }
-    if (checkflag)
-        return true;
-    else
-        return false;
-}
-
-function checkright(lco, rco) {
-    checkrflag = 0;
-    if (lco >= 650) {} else if ((lco == 25) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 225) || (rco >= 275 && rco <= 300) || (rco >= 575 && rco <= 625) || (rco >= 750 && rco <= 775))) {} else if ((lco == 75) && ((rco >= 625 && rco <= 700))) {} else if ((lco == 150) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 575 && rco <= 625) || (rco >= 675 && rco <= 775))) {} else if ((lco == 225) && ((rco >= 200 && rco <= 225) || (rco >= 350 && rco <= 450) || (rco >= 500 && rco <= 525) || (rco >= 675 && rco <= 700))) {} else if ((lco == 300) && ((rco >= 200 && rco <= 300) || (rco >= 500 && rco <= 625) || (rco >= 675 && rco <= 775))) {} else if ((lco == 375) && ((rco >= 275 && rco <= 300) || (rco == 350) || (rco >= 575 && rco <= 625) || (rco >= 750 && rco <= 775))) {} else if ((lco == 450) && ((rco >= 200 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 675 && rco <= 775))) {} else if ((lco == 600) && (rco >= 675 && rco <= 700)) {} else if ((lco == 525) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 225) || (rco >= 275 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 575 && rco <= 700))) {} else if ((lco == 400) && (rco == 400)) {} else {
-        checkrflag = 1;
-    }
-    if (checkrflag)
-        return true;
-    else
-        return false;
-}
-
-function checkdown(lco, rco) {
-    checkdflag = 0;
-    if (rco >= 800) {} else if ((rco == 75) && ((lco >= 50 && lco <= 125) || (lco >= 175 && lco <= 500) || (lco >= 550 && lco <= 625))) {} else if ((rco == 175) && ((lco >= 50 && lco <= 125) || (lco >= 250 && lco <= 425) || (lco >= 175 && lco <= 200) || (lco >= 475 && lco <= 500) || (lco >= 550 && lco <= 625))) {} else if ((rco == 250) && ((lco >= 25 && lco <= 125) || (lco >= 175 && lco <= 275) || (lco >= 400 && lco <= 500) || (lco >= 550 && lco <= 650))) {} else if ((rco == 325) && ((lco >= 250 && lco <= 425))) {} else if ((rco == 400) && ((lco >= 25 && lco <= 125) || (lco >= 175 && lco <= 200) || (lco >= 250 && lco <= 425) || (lco >= 475 && lco <= 500) || (lco >= 550 && lco <= 650))) {} else if ((rco == 475) && ((lco >= 250 && lco <= 425))) {} else if ((rco == 550) && ((lco >= 50 && lco <= 125) || (lco >= 175 && lco <= 275) || (lco >= 400 && lco <= 500) || (lco >= 550 && lco <= 625))) {} else if ((rco == 650) && ((lco >= 25 && lco <= 50) || (lco >= 250 && lco <= 425) || (lco >= 175 && lco <= 200) || (lco >= 475 && lco <= 500) || (lco >= 625 && lco <= 650))) {} else if ((rco == 725) && ((lco >= 50 && lco <= 275) || (lco >= 400 && lco <= 625))) {} else {
-        checkdflag = 1;
-    }
-    if (checkdflag)
-        return true;
-    else
-        return false;
-}
-
-function checkup(lco, rco) {
-    checkuflag = 0;
-    if (rco <= 75) {} else if ((rco == 175) && ((lco >= 50 && lco <= 125) || (lco >= 175 && lco <= 500) || (lco >= 550 && lco <= 625))) {} else if ((rco == 250) && ((lco >= 50 && lco <= 125) || (lco >= 250 && lco <= 425) || (lco >= 550 && lco <= 625))) {} else if ((rco == 325) && ((lco >= 25 && lco <= 125) || (lco >= 175 && lco <= 275) || (lco >= 325 && lco <= 350) || (lco >= 400 && lco <= 500) || (lco >= 550 && lco <= 650))) {} else if ((rco == 400) && ((lco >= 25 && lco <= 125) || (lco >= 175 && lco <= 200) || (lco >= 325 && lco <= 350) || (lco >= 475 && lco <= 500) || (lco >= 550 && lco <= 650))) {} else if ((rco == 475) && ((lco >= 250 && lco <= 425))) {} else if ((rco == 550) && ((lco >= 0 && lco <= 125) || (lco >= 250 && lco <= 425) || (lco >= 175 && lco <= 200) || (lco >= 475 && lco <= 500) || (lco >= 550 && lco <= 650))) {} else if ((rco == 650) && ((lco >= 50 && lco <= 125) || (lco >= 175 && lco <= 275) || (lco >= 325 && lco <= 350) || (lco >= 400 && lco <= 500) || (lco >= 550 && lco <= 625))) {} else if ((rco == 725) && ((lco >= 25 && lco <= 50) || (lco >= 100 && lco <= 125) || (lco >= 250 && lco <= 425) || (lco >= 550 && lco <= 575) || (lco >= 625 && lco <= 650))) {} else if ((rco == 800) && ((lco >= 50 && lco <= 275) || (lco >= 325 && lco <= 350) || (lco >= 400 && lco <= 625))) {} else if ((rco == 375) && ((lco >= 250 && lco <= 275) || (lco >= 400 && lco <= 425))) {} else {
-        checkuflag = 1;
-    }
-    if (checkuflag)
-        return true;
-    else
-        return false;
-}
-
-var k, l, m, n, o, p;
-document.onkeydown = checkKey;
 
 function checkKey(e) {
     e = e || window.event;
@@ -112,8 +65,52 @@ window.onload = function() {
     cx.fill();
     ggg = setInterval(drawGoons, 170);
     hhh = setInterval(drawPlayer(a, b, 0), 170);
-
 }
+
+function checkleft(lco, rco) {
+    checkflag = 0;
+    if (lco <= 25) {} else if ((lco == 75) && (rco >= 675 && rco <= 700)) {} else if ((lco == 150) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 225) || (rco >= 275 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 575 && rco <= 700))) {} else if ((lco == 225) && ((rco >= 200 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 675 && rco <= 775))) {} else if ((lco == 300) && ((rco >= 275 && rco <= 300) || (rco == 350) || (rco >= 575 && rco <= 625) || (rco >= 750 && rco <= 775))) {} else if ((lco == 375) && ((rco >= 200 && rco <= 300) || (rco >= 500 && rco <= 625) || (rco >= 675 && rco <= 775))) {} else if ((lco == 450) && ((rco >= 200 && rco <= 225) || (rco >= 350 && rco <= 450) || (rco >= 500 && rco <= 525) || (rco >= 675 && rco <= 700))) {} else if ((lco == 525) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 575 && rco <= 625) || (rco >= 675 && rco <= 775))) {} else if ((lco == 650) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 225) || (rco >= 275 && rco <= 300) || (rco >= 575 && rco <= 625) || (rco >= 750 && rco <= 775))) {} else if ((lco == 600) && ((rco >= 625 && rco <= 700))) {} else if ((lco == 275) && (rco == 400)) {} else {
+        checkflag = 1;
+    }
+    if (checkflag)
+        return true;
+    else
+        return false;
+}
+
+function checkright(lco, rco) {
+    checkrflag = 0;
+    if (lco >= 650) {} else if ((lco == 25) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 225) || (rco >= 275 && rco <= 300) || (rco >= 575 && rco <= 625) || (rco >= 750 && rco <= 775))) {} else if ((lco == 75) && ((rco >= 625 && rco <= 700))) {} else if ((lco == 150) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 575 && rco <= 625) || (rco >= 675 && rco <= 775))) {} else if ((lco == 225) && ((rco >= 200 && rco <= 225) || (rco >= 350 && rco <= 450) || (rco >= 500 && rco <= 525) || (rco >= 675 && rco <= 700))) {} else if ((lco == 300) && ((rco >= 200 && rco <= 300) || (rco >= 500 && rco <= 625) || (rco >= 675 && rco <= 775))) {} else if ((lco == 375) && ((rco >= 275 && rco <= 300) || (rco == 350) || (rco >= 575 && rco <= 625) || (rco >= 750 && rco <= 775))) {} else if ((lco == 450) && ((rco >= 200 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 675 && rco <= 775))) {} else if ((lco == 600) && (rco >= 675 && rco <= 700)) {} else if ((lco == 525) && ((rco >= 100 && rco <= 150) || (rco >= 200 && rco <= 225) || (rco >= 275 && rco <= 375) || (rco >= 425 && rco <= 525) || (rco >= 575 && rco <= 700))) {} else if ((lco == 400) && (rco == 400)) {} else {
+        checkrflag = 1;
+    }
+    if (checkrflag)
+        return true;
+    else
+        return false;
+}
+
+function checkdown(lco, rco) {
+    checkdflag = 0;
+    if (rco >= 800) {} else if ((rco == 75) && ((lco >= 50 && lco <= 125) || (lco >= 175 && lco <= 500) || (lco >= 550 && lco <= 625))) {} else if ((rco == 175) && ((lco >= 50 && lco <= 125) || (lco >= 250 && lco <= 425) || (lco >= 175 && lco <= 200) || (lco >= 475 && lco <= 500) || (lco >= 550 && lco <= 625))) {} else if ((rco == 250) && ((lco >= 25 && lco <= 125) || (lco >= 175 && lco <= 275) || (lco >= 400 && lco <= 500) || (lco >= 550 && lco <= 650))) {} else if ((rco == 325) && ((lco >= 250 && lco <= 425))) {} else if ((rco == 400) && ((lco >= 25 && lco <= 125) || (lco >= 175 && lco <= 200) || (lco >= 250 && lco <= 425) || (lco >= 475 && lco <= 500) || (lco >= 550 && lco <= 650))) {} else if ((rco == 475) && ((lco >= 250 && lco <= 425))) {} else if ((rco == 550) && ((lco >= 50 && lco <= 125) || (lco >= 175 && lco <= 275) || (lco >= 400 && lco <= 500) || (lco >= 550 && lco <= 625))) {} else if ((rco == 650) && ((lco >= 25 && lco <= 50) || (lco >= 250 && lco <= 425) || (lco >= 175 && lco <= 200) || (lco >= 475 && lco <= 500) || (lco >= 625 && lco <= 650))) {} else if ((rco == 725) && ((lco >= 50 && lco <= 275) || (lco >= 400 && lco <= 625))) {} else {
+        checkdflag = 1;
+    }
+    if (checkdflag)
+        return true;
+    else
+        return false;
+}
+
+function checkup(lco, rco) {
+    checkuflag = 0;
+    if (rco <= 75) {} else if ((rco == 175) && ((lco >= 50 && lco <= 125) || (lco >= 175 && lco <= 500) || (lco >= 550 && lco <= 625))) {} else if ((rco == 250) && ((lco >= 50 && lco <= 125) || (lco >= 250 && lco <= 425) || (lco >= 550 && lco <= 625))) {} else if ((rco == 325) && ((lco >= 25 && lco <= 125) || (lco >= 175 && lco <= 275) || (lco >= 325 && lco <= 350) || (lco >= 400 && lco <= 500) || (lco >= 550 && lco <= 650))) {} else if ((rco == 400) && ((lco >= 25 && lco <= 125) || (lco >= 175 && lco <= 200) || (lco >= 325 && lco <= 350) || (lco >= 475 && lco <= 500) || (lco >= 550 && lco <= 650))) {} else if ((rco == 475) && ((lco >= 250 && lco <= 425))) {} else if ((rco == 550) && ((lco >= 0 && lco <= 125) || (lco >= 250 && lco <= 425) || (lco >= 175 && lco <= 200) || (lco >= 475 && lco <= 500) || (lco >= 550 && lco <= 650))) {} else if ((rco == 650) && ((lco >= 50 && lco <= 125) || (lco >= 175 && lco <= 275) || (lco >= 325 && lco <= 350) || (lco >= 400 && lco <= 500) || (lco >= 550 && lco <= 625))) {} else if ((rco == 725) && ((lco >= 25 && lco <= 50) || (lco >= 100 && lco <= 125) || (lco >= 250 && lco <= 425) || (lco >= 550 && lco <= 575) || (lco >= 625 && lco <= 650))) {} else if ((rco == 800) && ((lco >= 50 && lco <= 275) || (lco >= 325 && lco <= 350) || (lco >= 400 && lco <= 625))) {} else if ((rco == 375) && ((lco >= 250 && lco <= 275) || (lco >= 400 && lco <= 425))) {} else {
+        checkuflag = 1;
+    }
+    if (checkuflag)
+        return true;
+    else
+        return false;
+}
+
 showChecker = function() {
     var aa, bb, ll = 0;
     for (aa = 0; aa <= 650; aa = aa + 25) {
@@ -125,14 +122,13 @@ showChecker = function() {
             }
         }
     }
-    console.log("totale" + ll);
 }
-
 
 drawCanvas = function() {
     canvasContext.fillStyle = 'black';
     canvasContext.fillRect(0, 50, 700, 825);
 }
+
 drawSystem = function() {
     canvasContext.lineWidth = 2;
     canvasContext.strokeStyle = 'blue';
@@ -175,7 +171,6 @@ drawSystem = function() {
     canvasContext.strokeStyle = 'blue';
     canvasContext.strokeRect(250, 350, 175, 100);
 
-
     canvasContext.lineWidth = 2;
     canvasContext.strokeStyle = 'blue';
     canvasContext.strokeRect(175, 425, 25, 100);
@@ -214,7 +209,6 @@ drawSystem = function() {
     canvasContext.lineWidth = 2;
     canvasContext.strokeStyle = 'blue';
     canvasContext.strokeRect(475, 675, 25, 75);
-
 
     cx.moveTo(0, 675);
     cx.lineTo(50, 675);
@@ -291,7 +285,6 @@ drawSystem = function() {
     canvasContext.strokeStyle = 'blue';
     canvasContext.strokeRect(550, 625, 25, 75);
 
-
     cx.fillStyle = 'black';
     cx.fillRect(326, 224, 23, 23);
 
@@ -318,7 +311,6 @@ drawSystem = function() {
 
     cx.fillStyle = 'black';
     cx.fillRect(551, 624, 23, 23);
-
 }
 
 drawFood = function() {
@@ -449,16 +441,14 @@ drawPlayer = function(h, j, c) {
             face(h, j, -d2, -c2);
         }
     }
-
     g[h][j] = 0;
     cx.fillStyle = 'black';
     cx.fillRect(a - 12, b - 12, 24, 24);
-    console.log("did it player?");
     a = h;
     b = j;
 }
+
 drawGoons = function() {
-    console.log("gooning");
     for (r = 0; r <= 675; r = r + 25) {
         cx.fillStyle = 'black';
         cx.fillRect(r + 2, 50, 21, 800);
@@ -487,7 +477,6 @@ drawGoons = function() {
     check();
 }
 goon1 = function() {
-    console.log("gooning1");
     var x, y;
     x = k - a;
     y = l - b;
@@ -495,33 +484,57 @@ goon1 = function() {
         if (x < y) {
             if (checkleft(k, l))
                 k = k - 25;
+			else if (checkup(k, l))
+                l = l - 25;
+			else if (checkright(k, l))
+                k = k + 25;
         } else {
             if (checkup(k, l))
                 l = l - 25;
+			else  if (checkleft(k, l))
+                k = k - 25;
+			else if (checkdown(k, l))
+                l = l + 25;	
         }
     } else if (x < 0 && y > 0) {
         if ((-x) < y) {
             if (checkright(k, l))
                 k = k + 25;
+			else if (checkup(k, l))
+                l = l - 25;
         } else {
             if (checkup(k, l))
                 l = l - 25;
+			else if (checkright(k, l))
+                k = k + 25;
+			else if (checkdown(k, l))
+                l = l + 25;	
         }
     } else if (x < 0 && y < 0) {
         if ((-x) < (-y)) {
             if (checkright(k, l))
                 k = k + 25;
+			else if (checkdown(k, l))
+                l = l + 25;	
         } else {
             if (checkdown(k, l))
                 l = l + 25;
+			else if (checkright(k, l))
+                k = k + 25;
         }
     } else if (x > 0 && y < 0) {
         if (x < (-y)) {
             if (checkleft(k, l))
                 k = k - 25;
+			else if (checkdown(k, l))
+                l = l + 25;	
+			else if (checkright(k, l))
+                k = k + 25;
         } else {
             if (checkdown(k, l))
                 l = l + 25;
+			else if (checkleft(k, l))
+                k = k - 25;
         }
     } else if (x == 0) {
         if (y > 0) {
@@ -546,6 +559,7 @@ goon1 = function() {
     cx.arc(k, l, 12, 0, (Math.PI) * 2);
     cx.fill();
 }
+
 goon2 = function() {
     var x, y;
     x = m - a;
@@ -554,34 +568,58 @@ goon2 = function() {
         if (x < y) {
             if (checkleft(m, n))
                 m = m - 25;
+			else if (checkup(m, n))
+                n = n - 25;
+			else if (checkright(m, n))
+                m = m + 25;
         } else {
             if (checkup(m, n))
                 n = n - 25;
+			else if (checkleft(m, n))
+                m = m - 25;
+			else if (checkdown(m, n))
+                n = n + 25;	
         }
 
     } else if (x < 0 && y > 0) {
         if ((-x) < y) {
             if (checkright(m, n))
                 m = m + 25;
+			 else if (checkup(m, n))
+                n = n - 25;
+			else if (checkdown(m, n))
+                n = n + 25;	
         } else {
             if (checkup(m, n))
                 n = n - 25;
+			else if (checkright(m, n))
+                m = m + 25;
         }
     } else if (x < 0 && y < 0) {
         if ((-x) < (-y)) {
             if (checkright(m, n))
                 m = m + 25;
+			else if (checkdown(m, n))
+                n = n + 25;	
         } else {
             if (checkdown(m, n))
                 n = n + 25;
+			else if (checkright(m, n))
+                m = m + 25;
         }
     } else if (x > 0 && y < 0) {
         if (x < (-y)) {
             if (checkleft(m, n))
                 m = m - 25;
+			else if (checkdown(m, n))
+                n = n + 25;	
         } else {
             if (checkdown(m, n))
                 n = n + 25;
+			else if (checkleft(m, n))
+                m = m - 25;
+			else if (checkright(m, n))
+                m = m + 25;
         }
     } else if (x == 0) {
         if (y > 0) {
@@ -614,14 +652,20 @@ goon3 = function() {
         if (x < y) {
             if (checkleft(o, p))
                 o = o - 25;
+			else if (checkup(m, n))
+                n = n - 25;
         } else {
             if (checkup(o, p))
                 p = p - 25;
+			else if (checkleft(m, n))
+                m = m - 25;
         }
     } else if (x < 0 && y > 0) {
         if ((-x) < y) {
             if (checkright(o, p))
                 o = o + 25;
+			else if (checkup(m, n))
+                n = n - 25;
         } else {
             if (checkup(o, p))
                 p = p - 25;
@@ -641,6 +685,8 @@ goon3 = function() {
         } else {
             if (checkdown(o, p))
                 p = p + 25;
+			else if (checkleft(m, n))
+                m = m - 25;
         }
     } else if (x == 0) {
         if (y > 0) {
@@ -663,7 +709,6 @@ goon3 = function() {
     cx.fillStyle = 'red';
     cx.arc(o, p, 12, 0, (Math.PI) * 2);
     cx.fill();
-
 }
 
 drawAgain = function() {
@@ -672,6 +717,7 @@ drawAgain = function() {
     cx.arc(a, b, 12, 0, (Math.PI) * 2);
     cx.fill();
 }
+
 check = function() {
     console.log(k + "" + l + "" + m + "" + n + "" + o + "" + p);
     if ((a == k && b == l) || (a == m && b == n) || (a == o && b == p)) {
